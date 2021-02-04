@@ -1,6 +1,106 @@
-
-img{
-    
-    width: 100%;
-    height: auto;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
+hr {
+    border: none;
+    height: 0.15rem;
+    background-color: #000;
+}
+#navbar{
+    height:10vh;
+    width: 100%;
+    background-color: hsla(0, 0%, 0%, 100%);
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    position:fixed;
+    color: hsl(0, 50%, 100%);
+    font-size: 2rem;
+    z-index: 1;
+}
+.nav-item{
+    height: auto;
+    width: auto;
+    background-color: #000; 
+    opacity: 65%;
+    padding: 1rem;
+    color: #fff;
+    text-align: center;
+    line-height: 2rem;
+    transition: opacity 0.5s, color 0.5s, box-shadow 0.5s;
+}
+.nav-item:hover{
+    cursor: pointer;
+    opacity: 90%;
+    box-shadow: inset 0rem 5rem 1rem 0rem #fff;
+}
+.home-nav:hover{
+    color: #000;
+}
+.about-me-nav:hover{
+    color: #d80;
+    
+}
+.experience-nav:hover{
+    color: #fd0;
+}
+.education-nav:hover{
+    color:#afd;
+}
+.training-nav:hover{
+    color: #8bf;
+}
+#main-container{
+    height: 81vh;
+    width: 100%;
+    position: relative;
+    top: 10vh;
+    background-color:#000;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.content{
+    height: 100%;
+    width: 1fr;
+}
+.orange{
+    background-color: #d80;
+    opacity: 75%;
+}
+.yellow{
+    background-color: #fd0;
+    opacity: 75%;
+}
+.green{
+    background-color: #afd;
+    opacity: 75%;
+}
+.blue{
+    background-color: #8bf;
+    opacity: 75%;
+}
+/* dont think I want to use this
+.content:hover{
+    opacity: 100%;
+    box-shadow: inset 0 0 4rem 0.25rem #fff;
+}*/
+.info {
+    padding: 2rem;
+    font-size: 1.5rem;
+    display: none;
+}
+#footer {
+    height:10vh;
+    width:100%;
+    background-color: #000;
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+}
+
