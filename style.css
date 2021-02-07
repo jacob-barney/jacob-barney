@@ -42,7 +42,6 @@ hr {
 }
 .about-me-nav:hover{
     color: #d80;
-    
 }
 .experience-nav:hover{
     color: #fd0;
@@ -53,12 +52,31 @@ hr {
 .training-nav:hover{
     color: #8bf;
 }
-#main-container{
+.projects-nav:hover{
+    color: #000;
+}
+#home-container {
+    height: 80vh;
+    width: 100%;
+    /*background-color: hsla(0, 0%, 0%, 50%);*/
+    color: #fff;
+    z-index: 1;
+    top: 10vh;
+    position: absolute;
+}
+#home-text {
+    margin: 4rem;
+    padding: 2rem;
+    font-size: 2rem;
+    background-color: hsla(0, 0%, 0%, 100%);
+}
+#main-container {
     height: 81vh;
     width: 100%;
     position: relative;
     top: 10vh;
     background-color:#000;
+    z-index: 1;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 2rem;
@@ -94,6 +112,31 @@ hr {
     padding: 2rem;
     font-size: 1.5rem;
     display: none;
+}
+#projects-container {
+    background-color: #000;
+    height: 80vh;
+    width: fit-content;
+    position: absolute;
+    top: 10vh;
+    z-index: 1;
+}
+#projects-container h3 {
+    color: #fff;
+}
+#wage-link {
+    text-decoration: none;
+    text-align: center;
+}
+#wage-div {
+    background-color: #0a6;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: inline;
+}
+#wage-div:hover {
+    background-color: #0a0;
 }
 #footer {
     height:10vh;

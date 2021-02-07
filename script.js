@@ -1,3 +1,40 @@
+let mainContainer = document.getElementById('main-container');
+
+let homeButton = document.getElementById('home-button');
+let homeContainer = document.getElementById('home-container');
+
+const homeTransition = () => {
+    homeContainer.style.display = 'block'
+    aboutMeText.style.display = 'none';
+    aboutMeContainer.style.opacity = '';
+    aboutMeContainer.style.boxShadow = '';
+    aboutMeContainer.style.width = '';
+    aboutMeContainer.style.height = '';
+    experienceText.style.display = 'none';
+    experienceContainer.style.opacity = '';
+    experienceContainer.style.boxShadow = '';
+    experienceContainer.style.width = '';
+    experienceContainer.style.height = '';
+    educationText.style.display = 'none';
+    educationContainer.style.opacity = '';
+    educationContainer.style.boxShadow = '';
+    educationContainer.style.width = '';
+    educationContainer.style.height = '';
+    trainingText.style.display = 'none';
+    trainingContainer.style.opacity = '';
+    trainingContainer.style.boxShadow = '';
+    trainingContainer.style.width = '';
+    trainingContainer.style.height = '';
+    aboutMeContainer.style.display = 'block';
+    experienceContainer.style.display = 'block';
+    educationContainer.style.display = 'block';
+    trainingContainer.style.display = 'block';
+    projectsContainer.style.display = 'none';
+    
+}
+
+homeButton.addEventListener('click', homeTransition);
+
 let aboutMeButton = document.getElementById('about-me-button');
 let aboutMeText = document.getElementById('about-me-text');
 let aboutMeContainer = document.getElementById('about-me-container');
@@ -23,6 +60,12 @@ const aboutMeTransition = () => {
     trainingContainer.style.boxShadow = '';
     trainingContainer.style.width = '';
     trainingContainer.style.height = '';
+    aboutMeContainer.style.display = 'block';
+    experienceContainer.style.display = 'block';
+    educationContainer.style.display = 'block';
+    trainingContainer.style.display = 'block';
+    projectsContainer.style.display = 'none';
+    homeContainer.style.display = 'none'
     
 }
 
@@ -53,6 +96,12 @@ const experienceTransition = () => {
     trainingContainer.style.boxShadow = '';
     trainingContainer.style.width = '';
     trainingContainer.style.height = '';
+    aboutMeContainer.style.display = 'block';
+    experienceContainer.style.display = 'block';
+    educationContainer.style.display = 'block';
+    trainingContainer.style.display = 'block';
+    projectsContainer.style.display = 'none';
+    homeContainer.style.display = 'none'
 }
 
 experienceButton.addEventListener('click', experienceTransition);
@@ -82,6 +131,12 @@ const educationTransition = () => {
     trainingContainer.style.boxShadow = '';
     trainingContainer.style.width = '';
     trainingContainer.style.height = '';
+    aboutMeContainer.style.display = 'block';
+    experienceContainer.style.display = 'block';
+    educationContainer.style.display = 'block';
+    trainingContainer.style.display = 'block';
+    projectsContainer.style.display = 'none';
+    homeContainer.style.display = 'none'
 }
 
 educationButton.addEventListener('click', educationTransition);
@@ -111,6 +166,27 @@ const trainingTransition = () => {
     educationContainer.style.boxShadow = '';
     educationContainer.style.width = '';
     educationContainer.style.height = '';
+    aboutMeContainer.style.display = 'block';
+    experienceContainer.style.display = 'block';
+    educationContainer.style.display = 'block';
+    trainingContainer.style.display = 'block';
+    projectsContainer.style.display = 'none';
+    homeContainer.style.display = 'none'
 }
 
 trainingButton.addEventListener('click', trainingTransition);
+
+let projectsButton = document.getElementById('projects-button');
+let projectsContainer = document.getElementById('projects-container');
+
+const projectsTransition = () => {
+    
+    projectsContainer.style.display = 'block';
+    aboutMeContainer.style.display = 'none';
+    experienceContainer.style.display = 'none';
+    educationContainer.style.display = 'none';
+    trainingContainer.style.display = 'none';
+    homeContainer.style.display = 'none'
+}
+
+projectsButton.addEventListener('click', projectsTransition);
