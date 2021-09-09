@@ -125,18 +125,18 @@ hr {
     color: #fff;
     padding-bottom: 3rem;
 }
-#wage-link {
+.projects-link {
     text-decoration: none;
     text-align: center;
 }
-#projects-div {
+.projects-div {
     background-color: #0a6;
     color: #fff;
     padding: 1rem;
     border-radius: 1rem;
     display: inline;
 }
-#projects-div:hover {
+.projects-div:hover {
     background-color: #0a0;
 }
 #footer {
