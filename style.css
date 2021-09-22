@@ -1,150 +1,325 @@
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family:Arial, Helvetica, sans-serif;
 }
-hr {
-    border: none;
-    height: 0.15rem;
-    background-color: #000;
+@font-face {
+    font-family: ausion;
+    src: url(../fonts/ausion/Ausion.otf);
 }
-#navbar{
-    height:10vh;
-    width: 100%;
-    background-color: hsla(0, 0%, 0%, 100%);
-    display: flex;
-    align-items: center;
-    justify-content:left;
-    position:fixed;
-    color: hsl(0, 50%, 100%);
-    font-size: 2rem;
-    z-index: 1;
+@keyframes index-text-animation-fade-out{
+    0%{opacity: 0.0;}
+    50%{opacity: 1.0}
+    100% {opacity: 0.0;}
 }
-.nav-item{
-    height: auto;
-    width: auto;
-    background-color: #000; 
-    opacity: 65%;
-    padding: 1rem;
-    color: #fff;
-    text-align: center;
-    line-height: 2rem;
-    transition: opacity 0.5s, color 0.5s, box-shadow 0.5s;
+@keyframes index-text-animation-stay{
+    0%{opacity: 0.0;}
+    95%{opacity: 1.0}
+    100% {opacity: 0.0;}
 }
-.nav-item:hover{
-    cursor: pointer;
-    opacity: 90%;
-    box-shadow: inset 0rem 5rem 1rem 0rem #fff;
+@keyframes index-text-animation-end{
+    0%{opacity: 0.0;}
+    50%{opacity: 0.8}
+    100% {opacity: 1.0;}
 }
-.home-nav:hover{
-    color: #000;
+@keyframes index-text-animation-throb{
+    0%{font-size: 75px; opacity: 1.0;}
+    50%{font-size: 73px; opacity: 1.0;}
+    100% {font-size: 75px; opacity: 1.0;}
 }
-.about-me-nav:hover{
-    color: #d80;
+@keyframes fade-in{
+    0%{opacity: 0.0;}
+    50%{opacity: 1.0; box-shadow: none}
+    100% {opacity: 1.0; box-shadow: inset 5px 5px 10px #222;}
 }
-.experience-nav:hover{
-    color: #fd0;
-}
-.education-nav:hover{
-    color:#afd;
-}
-.training-nav:hover{
-    color: #8bf;
-}
-.projects-nav:hover{
-    color: #000;
-}
-#home-container {
-    height: 80vh;
-    width: 100%;
-    /*background-color: hsla(0, 0%, 0%, 50%);*/
-    color: #fff;
-    z-index: 1;
-    top: 10vh;
-    position: absolute;
-}
-#home-text {
-    margin: 4rem;
-    padding: 2rem;
-    font-size: 2rem;
-    background-color: hsla(0, 0%, 0%, 100%);
-}
-#main-container {
-    height: 81vh;
-    width: 100%;
-    position: relative;
-    top: 10vh;
-    background-color:#000;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-.content{
-    height: 100%;
-    width: 1fr;
-}
-.orange{
-    background-color: #d80;
-    opacity: 75%;
-}
-.yellow{
-    background-color: #fd0;
-    opacity: 75%;
-}
-.green{
-    background-color: #afd;
-    opacity: 75%;
-}
-.blue{
-    background-color: #8bf;
-    opacity: 75%;
-}
-/* dont think I want to use this
-.content:hover{
-    opacity: 100%;
-    box-shadow: inset 0 0 4rem 0.25rem #fff;
-}*/
-.info {
-    padding: 2rem;
-    font-size: 1.5rem;
-    display: none;
-}
-#projects-container {
-    background-color: #000;
-    height: 80vh;
-    width: fit-content;
-    position: absolute;
-    top: 10vh;
-    z-index: 1;
-}
-#projects-container h3 {
-    color: #fff;
-    padding-bottom: 3rem;
-}
-.projects-link {
-    text-decoration: none;
-    text-align: center;
-}
-.projects-div {
-    background-color: #0a6;
-    color: #fff;
-    padding: 1rem;
-    border-radius: 1rem;
-    display: inline;
-}
-.projects-div:hover {
-    background-color: #0a0;
-}
-#footer {
-    height:10vh;
-    width:100%;
-    background-color: #000;
-    z-index: 1;
-    position: fixed;
-    bottom: 0;
+@keyframes fade-in-text{
+    0%{opacity: 0.0;}
+    50%{opacity: 1.0;}
+    100% {opacity: 1.0;}
 }
 
+html{
+    height: 100%;
+}
+body{
+    background-color: hsla(100, 65%, 65%, 0.5);
+    padding-bottom: 200px;
+}
+nav{
+    width: 100%;
+    height: 60px;
+    background-image: linear-gradient(to right, #f3f3f3, #222);
+}
+nav p{
+    color: #222;
+    font-size: 24px;
+    line-height: 55px;
+    float: left;
+    padding: 0px 20px;
+}
+nav p a{
+    text-decoration: none;
+    color: #222;
+}
+nav p a:hover{
+    color: #a3a3a3;
+}
+nav ul{
+    float: left; 
+    background-color: #f3f3f3;   
+}
+nav ul li{
+    float: left;
+    list-style: none;
+    position: relative;
+    
+}
+nav ul li a{
+    display: block;
+    color: #222;
+    font-size: 14px;
+    padding: 22px 14px;
+    text-decoration: none;
+    
+}
+nav ul li ul{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 0px 0px 4px 4px;
+    z-index: 1;
+    border: solid #a3a3a3;
+    
+}
+nav ul li:hover ul{
+    display: block;
+}
+nav ul li ul li{
+    width: 180px;
+    border-radius: 4px;
+}
+nav ul li ul li a{
+    padding: 8px 14px;
+}
+nav ul li ul li a:hover{
+    background-color: hsla(100, 50%, 50%, 0.5);
+}
+.main-div{
+    position: relative;
+    height: 100px;
+    width: 1200px;
+    margin: auto;
+    transform: translate(0, 300%);
+    border-radius: 10px;
+}
+/*start index page styling*/
+
+.index-intro-text{
+    text-align: center;
+    line-height: 100px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #222;
+    opacity: 0.0;
+}
+#welcome{
+    animation: index-text-animation-end 1.5s linear 1 forwards;
+    font-size: 35px;
+    top: -50%;
+}
+#home{
+    animation: index-text-animation-end 1.5s linear 1 forwards;
+    animation-delay: 1500ms;
+    top: 10%;
+}
+#written{
+    animation: index-text-animation-end 1.5s linear 1 forwards;
+    animation-delay: 3000ms;
+    font-size: 35px;
+    top: 70%;
+}
+#using{
+    animation: index-text-animation-end 1.5s linear 1 forwards;
+    animation-delay: 3000ms;
+    font-size: 35px;
+    top: 100%;
+}
+
+.sub-header{
+    font-size: 30px;
+}
+/*end index page styling*/
+
+/*start about me styling*/
+
+#about-me-main-div{
+    opacity: 0.0;
+    background-color: #fff;
+    padding: 20px;
+    height: 400px;
+    transform: translate(0, 50%);
+    animation: fade-in 2s linear 0ms 1 normal forwards;
+}
+#about-me-main-div h2{
+    opacity: 0.0;
+    animation: fade-in-text 1.5s linear 2000ms 1 normal forwards;
+}
+#about-me-main-div p{
+    opacity: 0.0;
+    font-size: 25px;
+    animation: fade-in-text 1.5s linear 2500ms 1 normal forwards;
+}
+
+/*end about me styling*/
+
+/*start education styling*/
+
+#education-main-div{
+    opacity: 0.0;
+    background-color: #fff;
+    padding: 20px;
+    height: 400px;
+    width: 700px;
+    transform: translate(0, 50%);
+    animation: fade-in 2s linear 0ms 1 normal forwards;
+}
+#education-main-div h2{
+    opacity: 0.0;
+    animation: fade-in-text 1.5s linear 2000ms 1 normal forwards;
+}
+#education-main-div p{
+    opacity: 0.0;
+    font-size: 25px;
+    animation: fade-in-text 1.5s linear 2500ms 1 normal forwards;
+}
+
+/*end education styling*/
+
+/*start experience styling*/
+
+#experience-main-div{
+    opacity: 0.0;
+    background-color: #fff;
+    padding: 20px;
+    height: 1100px;
+    transform: translate(0, 10%);
+    animation: fade-in 2s linear 0ms 1 normal forwards;
+}
+#experience-main-div h2{
+    opacity: 0.0;
+    animation: fade-in-text 1.5s linear 2000ms 1 normal forwards;
+}
+#experience-main-div p{
+    opacity: 0.0;
+    font-size: 25px;
+    animation: fade-in-text 1.5s linear 2500ms 1 normal forwards;
+}
+
+/*end experience styling*/
+
+/*start training styling*/
+
+#training-main-div{
+    opacity: 0.0;
+    background-color: #fff;
+    padding: 20px;
+    height: 800px;
+    width: 800px;
+    transform: translate(0, 15%);
+    animation: fade-in 2s linear 0ms 1 normal forwards;
+}
+#training-main-div h2{
+    opacity: 0.0;
+    animation: fade-in-text 1.5s linear 2000ms 1 normal forwards;
+}
+#training-main-div p{
+    opacity: 0.0;
+    font-size: 25px;
+    animation: fade-in-text 1.5s linear 2500ms 1 normal forwards;
+}
+
+/*end training styling*/
+
+
+
+/*start projects styling*/
+#projects-main-div{
+    opacity: 0.0;
+    background-color: #fff;
+    padding: 20px;
+    height: 200px;
+    transform: translate(0, 100%);
+    animation: fade-in 2s linear 0ms 1 normal forwards;
+}
+#projects-main-div h2{
+    opacity: 0.0;
+    animation: fade-in-text 1.5s linear 2000ms 1 normal forwards;
+}
+#projects-main-div p{
+    opacity: 0.0;
+    font-size: 30px;
+    animation: fade-in-text 1.5s linear 2500ms 1 normal forwards; 
+}
+.projects-link{
+    background-color: #f3f3f3;
+    box-shadow: 0px 0px;
+    width: fit-content;
+    height: 30px;
+    padding: 20px;
+    line-height: 5px;
+    display: inline-block;
+    font-size: 20px;
+    color: #222;
+    border-radius: 5px;
+    transition: background-color 0.5s, box-shadow 0.5s;
+}
+.projects-link:hover{
+    width: fit-content;
+    height: 30px;
+    padding: 20px;
+    line-height: 5px;
+    display: inline-block;
+    background-color: #a3a3a3;
+    box-shadow: 3px 3px 3px;
+}
+.project-description{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+#wage-calc-button{
+    opacity: 0.0;
+    animation: index-text-animation-end 1s 2500ms linear 1 forwards;
+}
+#guess-number-button{
+    opacity: 0.0;
+    animation: index-text-animation-end 1s 2750ms linear 1 forwards;
+}
+#bulk-pick-button{
+    opacity: 0.0;
+    animation: index-text-animation-end 1s 3000ms linear 1 forwards;
+}
+#btc-button{
+    opacity: 0.0;
+    animation: index-text-animation-end 1s 3250ms linear 1 forwards;
+}
+#wage-calc-description{
+    display: none;
+}
+#guess-number-description{
+    display: none;
+}
+#bulk-pick-description{
+    display: none;
+}
+#btc-description{
+    display: none;
+}
+/*end projects styling*/
