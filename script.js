@@ -51,3 +51,16 @@ const btcButtonDescriptionAnimationMouseOut = () => {
 }
 btcButton.addEventListener('mouseenter', btcButtonDescriptionAnimationMouseIn);
 btcButton.addEventListener('mouseout', btcButtonDescriptionAnimationMouseOut);
+
+/* pixelPaint description code */
+let pixelPaintButton = document.getElementById('pixel-paint-button');
+let pixelPaintDescription = document.getElementById('pixel-paint-description');
+
+const pixelPaintButtonDescriptionAnimationMouseIn = () => {
+    pixelPaintDescription.style.display = 'block';
+}
+const pixelPaintButtonDescriptionAnimationMouseOut = () => {
+    pixelPaintDescription.style.display = 'none';
+}
+pixelPaintButton.addEventListener('mouseenter', pixelPaintButtonDescriptionAnimationMouseIn);
+pixelPaintButton.addEventListener('mouseout', pixelPaintButtonDescriptionAnimationMouseOut);

@@ -310,6 +310,10 @@ nav ul li ul li a:hover{
     opacity: 0.0;
     animation: index-text-animation-end 1s 3250ms linear 1 forwards;
 }
+#pixel-paint-button{
+    opacity: 0.0;
+    animation: index-text-animation-end 1s 3500ms linear 1 forwards;
+}
 #wage-calc-description{
     display: none;
 }
@@ -320,6 +324,9 @@ nav ul li ul li a:hover{
     display: none;
 }
 #btc-description{
+    display: none;
+}
+#pixel-paint-description{
     display: none;
 }
 /*end projects styling*/
