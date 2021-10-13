@@ -64,3 +64,16 @@ const pixelPaintButtonDescriptionAnimationMouseOut = () => {
 }
 pixelPaintButton.addEventListener('mouseenter', pixelPaintButtonDescriptionAnimationMouseIn);
 pixelPaintButton.addEventListener('mouseout', pixelPaintButtonDescriptionAnimationMouseOut);
+
+/* quick g-drill description code */
+let quickGdrillButton = document.getElementById('quick-g-drill-button');
+let quickGdrillDescription = document.getElementById('quick-g-drill-description');
+
+const quickGdrillButtonDescriptionAnimationMouseIn = () => {
+    quickGdrillDescription.style.display = 'block';
+}
+const quickGdrillButtonDescriptionAnimationMouseOut = () => {
+    quickGdrillDescription.style.display = 'none';
+}
+quickGdrillButton.addEventListener('mouseenter', quickGdrillButtonDescriptionAnimationMouseIn);
+quickGdrillButton.addEventListener('mouseout', quickGdrillButtonDescriptionAnimationMouseOut);

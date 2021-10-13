@@ -314,6 +314,10 @@ nav ul li ul li a:hover{
     opacity: 0.0;
     animation: index-text-animation-end 1s 3500ms linear 1 forwards;
 }
+#quick-g-drill-button{
+    opacity: 0.0;
+    animation: index-text-animation-end 1s 3750ms linear 1 forwards;
+}
 #wage-calc-description{
     display: none;
 }
@@ -327,6 +331,9 @@ nav ul li ul li a:hover{
     display: none;
 }
 #pixel-paint-description{
+    display: none;
+}
+#quick-g-drill-description{
     display: none;
 }
 /*end projects styling*/
