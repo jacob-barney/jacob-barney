@@ -29,13 +29,13 @@ let bulkPickButton = document.getElementById('bulk-pick-button');
 let bulkPickDescription = document.getElementById('bulk-pick-description');
 const bulkPickButtonDescriptionAnimationMouseIn = () => {
     bulkPickDescription.style.display = 'block';
-    projectsContainer.style.height = '300px';
-    projectsContainer.style.transform =  'translate(0, 66.6%)';
+    // projectsContainer.style.height = '300px';
+    // projectsContainer.style.transform =  'translate(0, 66.6%)';
 }
 const bulkPickButtonDescriptionAnimationMouseOut = () => {
     bulkPickDescription.style.display = 'none';
-    projectsContainer.style.height = '200px';
-    projectsContainer.style.transform =  'translate(0, 100%)';
+    // projectsContainer.style.height = '200px';
+    // projectsContainer.style.transform =  'translate(0, 100%)';
 }
 bulkPickButton.addEventListener('mouseenter', bulkPickButtonDescriptionAnimationMouseIn);
 bulkPickButton.addEventListener('mouseout', bulkPickButtonDescriptionAnimationMouseOut);
@@ -77,3 +77,16 @@ const quickGdrillButtonDescriptionAnimationMouseOut = () => {
 }
 quickGdrillButton.addEventListener('mouseenter', quickGdrillButtonDescriptionAnimationMouseIn);
 quickGdrillButton.addEventListener('mouseout', quickGdrillButtonDescriptionAnimationMouseOut);
+
+// math practice description code
+let mathPracticeButton = document.getElementById('math-practice-button');
+let mathPracticeButtonDescription = document.getElementById('math-practice-description');
+
+const mathPracticeButtonDescriptionAnimationMouseIn = () => {
+    mathPracticeButtonDescription.style.display = 'block';
+}
+const mathPracticeButtonDescriptionAnimationMouseOut = () => {
+    mathPracticeButtonDescription.style.display = 'none';
+}
+mathPracticeButton.addEventListener('mouseenter', mathPracticeButtonDescriptionAnimationMouseIn);
+mathPracticeButton.addEventListener('mouseout', mathPracticeButtonDescriptionAnimationMouseOut);

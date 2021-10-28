@@ -43,7 +43,8 @@ html{
     height: 100%;
 }
 body{
-    background-color: hsla(100, 65%, 65%, 0.5);
+    /* background-color: hsla(100, 65%, 65%, 0.5); */
+    background-color: rgba(30, 30, 30, 1.0);
     padding-bottom: 200px;
 }
 nav{
@@ -104,15 +105,16 @@ nav ul li ul li a{
     padding: 8px 14px;
 }
 nav ul li ul li a:hover{
-    background-color: hsla(100, 50%, 50%, 0.5);
+    background-color: rgba(0, 75, 0, 0.2);
 }
 .main-div{
     position: relative;
     height: 100px;
     width: 1200px;
     margin: auto;
-    transform: translate(0, 300%);
+    /* transform: translate(0, 300%); */
     border-radius: 10px;
+    top: 75px;
 }
 /*start index page styling*/
 
@@ -120,38 +122,38 @@ nav ul li ul li a:hover{
     text-align: center;
     line-height: 100px;
     margin: 0;
-    position: absolute;
-    top: 50%;
+    position: relative;
+    /* top: 50%; */
+    top: 100px;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
     font-size: 50px;
-    color: #222;
+    color: rgb(220, 220, 220);
     opacity: 0.0;
 }
 #welcome{
     animation: index-text-animation-end 1.5s linear 1 forwards;
     font-size: 35px;
-    top: -50%;
+    top: 150px;
 }
 #home{
     animation: index-text-animation-end 1.5s linear 1 forwards;
     animation-delay: 1500ms;
-    top: 10%;
+    top: 150px;
 }
 #written{
     animation: index-text-animation-end 1.5s linear 1 forwards;
     animation-delay: 3000ms;
     font-size: 35px;
-    top: 70%;
+    top: 150px;
 }
 #using{
     animation: index-text-animation-end 1.5s linear 1 forwards;
     animation-delay: 3000ms;
     font-size: 35px;
-    top: 100%;
+    top: 100px;
 }
-
 .sub-header{
     font-size: 30px;
 }
@@ -164,7 +166,7 @@ nav ul li ul li a:hover{
     background-color: #fff;
     padding: 20px;
     height: 400px;
-    transform: translate(0, 50%);
+    /* transform: translate(0, 50%); */
     animation: fade-in 2s linear 0ms 1 normal forwards;
 }
 #about-me-main-div h2{
@@ -187,7 +189,7 @@ nav ul li ul li a:hover{
     padding: 20px;
     height: 400px;
     width: 700px;
-    transform: translate(0, 50%);
+    /* transform: translate(0, 50%); */
     animation: fade-in 2s linear 0ms 1 normal forwards;
 }
 #education-main-div h2{
@@ -208,8 +210,8 @@ nav ul li ul li a:hover{
     opacity: 0.0;
     background-color: #fff;
     padding: 20px;
-    height: 1100px;
-    transform: translate(0, 10%);
+    height: 1000px;
+    /* transform: translate(0, 10%); */
     animation: fade-in 2s linear 0ms 1 normal forwards;
 }
 #experience-main-div h2{
@@ -232,7 +234,7 @@ nav ul li ul li a:hover{
     padding: 20px;
     height: 800px;
     width: 800px;
-    transform: translate(0, 15%);
+    /* transform: translate(0, 15%); */
     animation: fade-in 2s linear 0ms 1 normal forwards;
 }
 #training-main-div h2{
@@ -254,8 +256,11 @@ nav ul li ul li a:hover{
     opacity: 0.0;
     background-color: #fff;
     padding: 20px;
-    height: 200px;
-    transform: translate(0, 100%);
+    height: 350px;
+    display: relative;
+    /* top:-400px; */
+    /* height: 400px; */
+    /* transform: translate(0, 100%); */
     animation: fade-in 2s linear 0ms 1 normal forwards;
 }
 #projects-main-div h2{
@@ -273,6 +278,7 @@ nav ul li ul li a:hover{
     width: fit-content;
     height: 30px;
     padding: 20px;
+    margin-bottom: 5px;
     line-height: 5px;
     display: inline-block;
     font-size: 20px;
@@ -318,6 +324,10 @@ nav ul li ul li a:hover{
     opacity: 0.0;
     animation: index-text-animation-end 1s 3750ms linear 1 forwards;
 }
+#math-practice-button{
+    opacity: 0.0;
+    animation: index-text-animation-end 1s 4000ms linear 1 forwards;
+}
 #wage-calc-description{
     display: none;
 }
@@ -336,4 +346,8 @@ nav ul li ul li a:hover{
 #quick-g-drill-description{
     display: none;
 }
+#math-practice-description{
+    display: none;
+}
+
 /*end projects styling*/
